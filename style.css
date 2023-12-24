@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #5744a5;
+  text-align: center;
+  margin: 20px 0;
+}
+
+svg {
+  max-width: 800px;
+  width: 100% important;
+  margin: 0 auto;
+}
+
+#buddies {
+  animation: buddy 3s ease infinite;
+  transform-origin: bottom;
+  transform-box: fill-box;
+  transform: translate(100px);
+}
+
+#star {
+  animation: star 4s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#line1,
+#line2,
+#line3,
+#line4,
+#line5,
+#line6,
+#line7 {
+  animation: spark 1s ease-in-out infinite;
+}
+
+@keyframes buddy {
+  from {
+    transform: translate(100px);
+  }
+
+  to {
+    transform: translate(0);
+  }
+}
+
+@keyframes star {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes spark {
+  from {
+    opacity: 0;
+    color: red;
+  }
+
+  to {
+    opacity: 1;
+    color: green;
+  }
+}
+
+footer {
+  background-color: #5744a5; /* Warna latar belakang sesuaikan dengan kebutuhan */
+  color: #fff; /* Warna teks sesuaikan dengan kebutuhan */
+  text-align: center;
+  padding: 10px;
+}
+
+/* Center the content in the footer */
+footer .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
